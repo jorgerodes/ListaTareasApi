@@ -1,6 +1,6 @@
 # ListaTareasApi
 
-Proyecto API en CleanArchitecture utilizando NET 8, utilizando patrón CQRS y patrón Repositorio y DDD.
+Proyecto API en CleanArchitecture utilizando NET 8, utilizando patrón CQRS, patrón Repositorio y DDD.
 
 La Base de Datos es SQL Server, para lo cual hay que crear un contenedor docker ejecutando lo siguiente:
 
@@ -19,7 +19,7 @@ Se han creado, mediante Minimal Api, 4 endpoints:
     - Finalizar tarea : al igual que para creación de tareas, cada vez que se finaliza una tarea, se ejecuta con Domain Event (actualmente no hace nada, pero se podría enviar un email por ejemplo).
 
 
-
+El Status de una tarea se ha hecho mediante un enum, y no mediante una tabla, para mayor simplicidad.
 
 
 
