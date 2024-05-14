@@ -1,6 +1,6 @@
 using Asp.Versioning;
 using Asp.Versioning.Builder;
-using CleanArchitecture.Api.Extensions;
+using ListaTareasApi.Api.Extensions;
 using ListaTareasApi.Api.Tareas;
 using ListaTareasApi.Application;
 using ListaTareasApi.Infrastructure;

@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Domain.Alquileres;
-using ListaTareasApi.Domain.Abstractions;
+﻿using ListaTareasApi.Domain.Abstractions;
+using ListaTareasApi.Domain.Tareas;
 using ListaTareasApi.Domain.Tareas.Events;
 
 
@@ -55,6 +55,12 @@ public sealed class Tarea : Entity<TareaId>
         FechaFinalizacion = utcNow;
         RaiseDomainEvent(new TareaFinalizadaDomainEvent(Id!));
 
+        return Result.Success();
+    }
+
+    public Result ActualizarOrden(int nuevoOrden)
+    {
+        Orden = new Orden(nuevoOrden);
         return Result.Success();
     }
 }

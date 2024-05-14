@@ -1,7 +1,7 @@
 using ListaTareasApi.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Api.Extensions;
+namespace ListaTareasApi.Api.Extensions;
 
 public static class ApplicationBuilderExtensions
 {

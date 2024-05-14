@@ -2,7 +2,7 @@ using System.Data;
 using ListaTareasApi.Application.Abstractions.Data;
 using Microsoft.Data.SqlClient;
 
-namespace CleanArchitecture.Infrastructure.Data;
+namespace ListaTareasApi.Infrastructure.Data;
 
 internal sealed class SqlConnectionFactory : ISqlConnectionFactory
 {

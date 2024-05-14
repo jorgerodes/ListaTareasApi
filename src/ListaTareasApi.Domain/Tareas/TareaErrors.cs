@@ -1,6 +1,6 @@
 using ListaTareasApi.Domain.Abstractions;
 
-namespace CleanArchitecture.Domain.Alquileres;
+namespace ListaTareasApi.Domain.Tareas;
 
 
 public static class TareaErrors

@@ -1,5 +1,4 @@
-﻿using CleanArchitecture.Domain.Alquileres;
-using ListaTareasApi.Application.Abstractions.Clock;
+﻿using ListaTareasApi.Application.Abstractions.Clock;
 using ListaTareasApi.Application.Abstractions.Messaging;
 using ListaTareasApi.Domain.Abstractions;
 using ListaTareasApi.Domain.Tareas;
@@ -33,9 +32,7 @@ namespace ListaTareasApi.Application.Tareas.FinalizarTarea
 
             if (tarea is null) {
                 return Result.Failure<TareaResponse>(TareaErrors.NotFound);
-
             }
-
 
             var resultado = tarea.Finalizar(_dateTimeProvider.currentTime);
 

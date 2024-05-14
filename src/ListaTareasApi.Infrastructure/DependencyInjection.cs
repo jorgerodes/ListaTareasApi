@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Data.SqlClient;
 using ListaTareasApi.Domain.Abstractions;
 using ListaTareasApi.Application.Abstractions.Data;
-using CleanArchitecture.Infrastructure.Data;
+using ListaTareasApi.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using ListaTareasApi.Infrastructure.Repositories;
 

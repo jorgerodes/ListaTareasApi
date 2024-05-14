@@ -1,6 +1,7 @@
 ﻿using Azure;
 using ListaTareasApi.Application.Tareas.FinalizarTarea;
 using ListaTareasApi.Application.Tareas.ListaTareas;
+using ListaTareasApi.Application.Tareas.ReordenarTareas;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Query.Internal;
@@ -20,6 +21,8 @@ namespace ListaTareasApi.Api.Tareas
             builder.MapPost("/tareas", CrearTareaAsync);
 
             builder.MapPatch("/tareas/{id}/finalizar", FinalizarTareaASync);
+
+            builder.MapPatch("/tareas/reordenar", ReordenarTareasAsync);
 
             return builder;
         }
@@ -58,13 +61,32 @@ namespace ListaTareasApi.Api.Tareas
 
         }
 
-        [HttpPatch("{id}/finalizar")]
+       
         public static  async Task<IResult> FinalizarTareaASync(
             Guid id,
             ISender sender,
             CancellationToken cancellationToken)
         {
             var command = new FinalizarTareaCommand(id);
+
+            var resultado = await sender.Send(command, cancellationToken);
+
+            return resultado.IsSuccess
+                ? Results.Ok(resultado.Value)
+                : Results.BadRequest(resultado.Error);
+        }
+
+
+        public static async Task<IResult> ReordenarTareasAsync(
+            List<OrdenaTareaRequest> request,
+            ISender sender,
+            CancellationToken cancellationToken)
+        {
+
+            List<Guid> guidsTareas = request.Select(x => x.Id).ToList();
+            List<int> ordenes = request.Select(x => x.Orden).ToList();
+
+            var command = new ReordenarTareasCommand(guidsTareas,ordenes);
 
             var resultado = await sender.Send(command, cancellationToken);
 

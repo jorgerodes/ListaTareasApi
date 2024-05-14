@@ -1,5 +1,4 @@
-﻿using CleanArchitecture.Domain.Alquileres;
-using ListaTareasApi.Application.Abstractions.Clock;
+﻿using ListaTareasApi.Application.Abstractions.Clock;
 using ListaTareasApi.Application.Abstractions.Messaging;
 using ListaTareasApi.Application.Tareas.FinalizarTarea;
 using ListaTareasApi.Domain.Abstractions;
