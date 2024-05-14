@@ -12,6 +12,7 @@ Esta contraseña es lo que pondremos en el app.settings del proyecto ListaTareas
 Al ejecutar el proyecto Api, automáticamente se generará la Base de datos y se ejecutará la migración, creándose una única tabla de tareas.
 
 Se han creado, mediante Minimal Api, 4 endpoints:
+
     - Creación de tarea
     - Listado de tareas : este es el único endpoint que se ha hecho con Dapper, utilizando los otros 3 EF
     - Reordenación de tareas : Recibe un listado de pares de tarea-orden, sean 2 sean 20
