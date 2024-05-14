@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Tareas\CrearTarea\CrearTareaCommand.cs~RF4926b3f3.TMP" />
+    <None Remove="Tareas\CrearTarea\tvk0vbmt.2ao~" />
+    <None Remove="Tareas\ListaTareas\hyimlx45.321~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.15" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ListaTareasApi.Domain\ListaTareasApi.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
