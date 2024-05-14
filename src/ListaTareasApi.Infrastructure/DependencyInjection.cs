@@ -37,6 +37,8 @@ namespace ListaTareasApi.Infrastructure
 
             services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
 
+
+
             return services;
         }
     }
