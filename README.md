@@ -7,6 +7,8 @@ La Base de Datos es SQL Server, para lo cual hay que crear un contenedor docker 
     - docker pull mcr.microsoft.com/mssql/server
     - docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Jorge@Rodes" -p 1433:1433 -d mcr.microsoft.com/mssql/server
 
+salvo que se prefiera configurar un SQLExpress Local.
+
 Esta contraseña es lo que pondremos en el app.settings del proyecto ListaTareasApi.Api, aunque por defecto ya está la indicada.
 
 Al ejecutar el proyecto Api, automáticamente se generará la Base de datos y se ejecutará la migración, creándose una única tabla de tareas.
